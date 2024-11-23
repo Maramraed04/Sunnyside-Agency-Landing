@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Div-Header {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    display: inline-block;
+}
+
+.text {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu-overlay {
+    position: absolute;
+    top: 2%;
+    left: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-overlay li {
+    margin: 10px;
+    float: right;
+  }
+  
+  .menu-overlay a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+  }
+  
+  .menu-overlay a:hover {
+    background-color: rgba(228, 227, 227, 0.8);
+  }
+
+  .text2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+  }
+  .text2 p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: xx-large;
+ }
+.hero{
+    text-align: center;
+    padding-top: 15vh;
+}
+.hero h1{
+    font-size: 56px;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 6px;
+    padding-bottom: 10vh;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.box{
+    padding: 12vw;
+}
+.box h2{
+    font-size: 46px;
+    color: #1d252c;
+    margin-bottom: 30px;
+}
+.box p{
+    color: #444449;
+    margin-bottom: 25px;
+}
+.btn-underline{
+    font-family: 'Fraunces', serif;
+    color: #23303B;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
+.btn-underline::after{
+    content: '';
+    position: absolute;
+    background-color: #f78376;
+    height: 10px;
+    width: 110%;
+    left: -5%;
+    bottom: 0;
+    z-index: -1;
+    transition: height 0.4s;
+}
+.btn-underline:hover::after{
+    height: 100%;
+}
+.col img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.card{
+    position: relative;
+}
+.card .box-content{
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    max-width: 400px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #0c2923;
+}
+.box-content h3{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.testimonial{
+    text-align: center;
+    padding: 14vh 7vw;
+}
+.testimonial h2{
+    color: #545758;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 32px;
+    margin-bottom: 8vh;
+}
+.testimonial-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+}
+.single-testimonial img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+.single-testimonial p{
+    color: #1e1e1f;
+}
+h5.author{
+    color: #22272b;
+    margin-top: 70px;
+    font-size: 30px;
+}
+p.designation{
+    color: #2e2d2b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gallery img{
+    width: 100%;
+}
+
+footer{
+    background: #87d4c4;
+    text-align: center;
+    padding: 5rem 0;
+
+}
+.footer-menu{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    
+    
+}
+
+.footer-menu ul li a{
+    color: #065241;
+    transition: color 0.2s ease;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li:not(:last-child){
+    margin-right: 40px;}
+
+nav ul li a.btn{
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    color: black;
+    background-color: white;
+    padding: 14px 25px;
+    border-radius: 35px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+nav ul li a.btn:hover{
+    color: #FFF;
+    background-color: #6ECEFF;
+}
+.footer-menu ul li a:hover{
+    color: #FFF;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.toggle{
+    height: auto !important;
+}
+@media only screen and (max-width: 1020px){
+    .box{
+        padding: 60px;
+    }
+    .box-content{
+        width: 80%;
+    }
+    .card .box-content{
+        top: 67%;
+    }
+    .box-content h3{
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .hamburger{
+        display: inline-block;
+    }
+    .nav-bar{
+        position: relative;
+    }
+    .nav{
+        position: absolute;
+        width: 100%;
+        background-color: #00aaff;
+        left: 0;
+        top: 100px;
+        height: 0;
+        overflow: hidden;
+        text-align: center; 
+    }
+    .nav ul li{
+        display: block;
+        padding: 20px 0;
+    }
+    .nav ul li:not(:last-child){
+        margin-right: 0;
+    }
+    .row{
+        grid-template-columns: 1fr;
+    }
+    .col-2{
+        order: -1;
+    }
+    .box{
+        text-align: center;
+    }
+    .testimonial-container{
+        grid-template-columns: 1fr;
+    }
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .nav-bar{
+        padding: 1.5em;
+    }
+    .hero h1{
+        font-size: 36px;
+    }
+    .box{
+        padding: 40px;
+    }
+    .box h2{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 17px;
+        line-height: 1.3;
+    }
+}
+    </style>
+    <title>قائمة بسيطة</title>
+</head>
+<body>
+  <div class="Div-Header">
+    <img src="image-header.jpg" height="500px" width="100%">
+    <div class="menu-overlay">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#"> Servies</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="text">
+        <h2>sunnyside</h2>
+    </div>
+    <div CLASS="text2">
+        <h1>WE ARE AREATIVES</h1>
+        <p> &#8595;</p>
+    </div>
+</div>
+  <main>
+    <div class="row">
+      <div class="col col-1">
+        <div class="box">
+          <h2>Transform your brand</h2>
+          <p>We are a full-service creative agency specializing in helping brands grow fast. 
+  Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a href="#" class="btn-underline">Learn more</a>
+        </div>
+      </div>
+      <div class="col col-2">
+        <img src="image-transform.jpg" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-2">
+        <img src="image-stand-out.jpg" alt="">
+      </div>
+      <div class="col col-1">
+        <div class="box">
+          <h2>Stand out to the right audience</h2>
+          <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+          <a href="#" class="btn-underline">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <img src="image-graphic-design.jpg" alt="">
+          <div class="box-content">
+            <h3>Graphic design</h3>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="image-photography.jpg" alt="">
+          <div class="box-content">
+            <h3>Photography</h3>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="testimonial">
+      <h2>Client testimonials</h2>
+      <div class="testimonial-container">
+
+        <div class="single-testimonial">
+          <img src="image-emily.jpg" alt="">
+          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+          <h5 class="author">Emily R.</h5>
+          <p class="designation">Marketing Director</p>
+        </div>
+
+        <div class="single-testimonial">
+          <img src="image-thomas.jpg" alt="">
+          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+          <h5 class="author">Thomas S.</h5>
+          <p class="designation">Chief Operating Officer</p>
+        </div>
+
+        <div class="single-testimonial">
+          <img src="image-jennie.jpg" alt="">
+          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+          <h5 class="author">Jennie F.</h5>
+          <p class="designation"> Business Owner</p>
+        </div>
+
+      </div>
+    </section>
+    <div class="gallery">
+      <img src="image-gallery-milkbottles.jpg" alt="">
+      <img src="image-gallery-orange.jpg" alt="">
+      <img src="image-gallery-cone.jpg" alt="">
+      <img src="image-gallery-sugarcubes.jpg" alt="">
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+        <img src="logo.svg" alt="">
+      <nav class="footer-menu">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </nav>
+      <nav class="social-menu">
+        <ul>
+          <li><a href="#"><img src="icon-facebook.svg" alt=""></a></li>
+          <li><a href="#"><img src="icon-instagram.svg" alt=""></a></li>
+          <li><a href="#"><img src="icon-twitter.svg" alt=""></a></li>
+          <li><a href="#"><img src="icon-pinterest.svg" alt=""></a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
